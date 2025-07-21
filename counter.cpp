@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+class Counter {
+    static int count;
+
+public:
+    Counter() {
+        count++;
+    }
+
+    static int getCount() {
+        return count;
+    }
+};
+
+// Define and initialize static member
+int Counter::count = 0;  
+int main() {
+    Counter c1, c2, c3, c4;
+    cout << "Number of objects created: " << Counter::getCount() << endl;
+    return 0;
+}
