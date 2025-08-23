@@ -2,7 +2,6 @@
 #include <string>
 using namespace std;
 
-// Base Class
 class Employee {
 protected:
     string empName, empId, address, mailId, mobileNo;
@@ -31,10 +30,9 @@ public:
     }
 };
 
-// Derived Class for Salary Calculations
 class Salary : public Employee {
 protected:
-    double BP; // Basic Pay
+    double BP; 
     double DA, HRA, PF, staffClubFund, grossSalary, netSalary;
 public:
     void getSalaryDetails() {
@@ -63,7 +61,7 @@ public:
     }
 };
 
-// Further Derived Classes
+
 class AssistantProfessor : public Salary {};
 class AssociateProfessor : public Salary {};
 class Professor : public Salary {};
@@ -101,3 +99,4 @@ int main() {
 
     return 0;
 }
+
